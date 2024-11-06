@@ -2,7 +2,7 @@
 An implementation for understanding data structures
 
 
-##Data Structure
+## Data Structure
 
 A way of organizing data so it is used the most effectively.
 
