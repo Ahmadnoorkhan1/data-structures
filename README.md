@@ -169,3 +169,17 @@ function factorial(n) {
   return n * factorial(n - 1);
 }
 ```
+
+
+## Understanding Big-O Notation
+
+Understanding Big-O is crucial because it allows us to evaluate the efficiency of our code, especially as our data grows. Each complexity category represents different growth rates:
+
+- **Constant Time** `O(1)`: Shows ideal scenarios where execution time remains the same regardless of input size.
+- **Logarithmic Time** `O(log n)`: Efficient for algorithms like binary search, where data is reduced by half with each step.
+- **Linear Time** `O(n)`: Reflects algorithms that scale proportionally to input size, like iterating through an array.
+- **Linearithmic Time** `O(n log n)`: Common in more efficient sorting algorithms, such as merge sort.
+- **Quadratic** `O(n^2)` and **Cubic** `O(n^3)`: These complexities are slower, often involving nested loops, and should be used with smaller datasets.
+- **Exponential** `O(2^n)` and **Factorial** `O(n!)`: Indicate extremely high growth rates, suitable only for small inputs.
+
+By carefully analyzing these examples, you can make informed decisions about which algorithms best fit your needs, ensuring efficient and scalable code. Remember, understanding and optimizing time complexity is fundamental to writing performant applications, especially when handling large datasets.
