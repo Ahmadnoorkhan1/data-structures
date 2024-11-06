@@ -52,5 +52,5 @@ Insertion and deletion operations can be more efficient than singly linked lists
 
 | Data Structure        | Pros                     | Cons                       |
 |-----------------------|--------------------------|----------------------------|
-| **Singly Linked Lists**| Uses less memory. Simpler implementation | Cannot easily access values. |
+| **Singly Linked Lists**| Uses less memory. Simpler implementation | Cannot easily access previous values. |
 | **Doubly Linked Lists**| Can be traversed in both directions | Uses more memory.          |
