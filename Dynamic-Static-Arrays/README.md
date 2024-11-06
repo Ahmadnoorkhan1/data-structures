@@ -1,4 +1,5 @@
 # Understanding Arrays
+An implementation for understanding Arrays using javascript.
 
 ## Static Arrays
 

@@ -1,5 +1,5 @@
 # My Understanding of Data Structures
-An implementation for understanding data structures
+An implementation for understanding data structures using javascript.
 
 
 ## Data Structure
