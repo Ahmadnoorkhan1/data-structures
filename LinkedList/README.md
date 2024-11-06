@@ -9,9 +9,9 @@ Linked lists are used to implement lists, queues, stacks. They are great to use 
 
 ### Terminologies in Linked Lists
 
-**Head** : The first node in the linked list.\n
-**Tail** : The last node in the linked list.\n
-**Pointer** : The reference to the node.\n
-**Node** : The object containing data and pointers.
+**Head**: The first node in the linked list.<br>
+**Tail**: The last node in the linked list.<br>
+**Pointer**: The reference to the node.<br>
+**Node**: The object containing data and pointers.
 
-![Local Image](./assets/LinkedList.png)
+![Local Image](../assets/LinkedList.png)
