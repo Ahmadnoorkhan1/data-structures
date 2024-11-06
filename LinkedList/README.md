@@ -14,4 +14,4 @@ Linked lists are used to implement lists, queues, stacks. They are great to use 
 **Pointer** : The reference to the node.
 **Node** : The object containing data and pointers.
 
-![Local Image] (./assets/LinkedList.png)
+![Local Image](./assets/LinkedList.png)
