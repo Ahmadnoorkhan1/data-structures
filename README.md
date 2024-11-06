@@ -1,4 +1,4 @@
-# data-structures
+# My Understanding of Data Structures
 An implementation for understanding data structures
 
 
@@ -19,3 +19,153 @@ It is an absraction of a data structure which provides only the interface to whi
 | List  | Dynamic Array, Linked List  |
 | Queue | Linked List Queue, Array based Queue  |
 | Map  | Tree map, Hash map  |
+
+
+
+## Computational Complexity Analysis
+
+How much time and space does an algorithm needs for computation is known as complexity analysis.
+
+### Big-O Notation
+
+Big-O notation gives an upper bound of the complexity of the algorithm **(keeping in mind the worst possible case)**. It helps to quantify performance as the input size becomes arbitrarily large.
+
+| Time Complexity       | Notation      |
+|-----------------------|---------------|
+| Constant Time         | O(1)          |
+| Logarithmic Time      | O(log(n))     |
+| Linear Time           | O(n)          |
+| Linearithmic Time     | O(nlog(n))    |
+| Quadratic Time        | O(n^2)        |
+| Cubic Time            | O(n^3)        |
+| Exponential Time      | O(b^n) (where b > 1) |
+| Factorial Time        | O(n!)         |
+
+### Code Examples (Javascript)
+
+**Constant Time: O(1)**
+
+```
+function constantTime(arr) {
+  return arr[0]; // Accessing the first element
+}
+```
+
+**Logarithmic Time : O(log n)**
+
+```
+function binarySearch(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+
+    if (arr[mid] === target) {
+      return mid; // Target found
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+
+  return -1; // Target not found
+}
+```
+
+**Linear Time: O(n)**
+
+```
+function linearTime(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]); // Iterating through the array
+  }
+}
+```
+
+**Linearithmic Time: O(n log n)**
+
+```
+function mergeSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+
+  const mid = Math.floor(arr.length / 2);
+  const leftHalf = arr.slice(0, mid);
+  const rightHalf = arr.slice(mid);
+
+  return merge(mergeSort(leftHalf), mergeSort(rightHalf));
+}
+
+function merge(left, right) {
+  const merged = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      merged.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      merged.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  return merged.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+```
+
+**Quadratic Time: O(n^2)**
+
+```
+function bubbleSort(arr) {
+  for (let i = 0; i < arr.length - 1; i++) {
+    for (let j = 0; j < arr.length - i - 1; j++) {
+      if (arr[j] > arr[j + 1]) {
+        [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+      }
+    }
+  }
+  return arr;
+}
+```
+
+**Cubic Time: O(n^3)**
+
+```
+function cubicTime(n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j < n; j++) {
+      for (let k = 0; k < n; k++) {
+        // Some operation here
+        console.log(i, j, k);
+      }
+    }
+  }
+}
+```
+
+**Exponential Time: O(2^n)**
+
+```
+function fibonacci(n) {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+
+**Factorial Time: O(n!)**
+
+```
+function factorial(n) {
+  if (n === 0) {
+    return 1;
+  }
+  return n * factorial(n - 1);
+}
+```
