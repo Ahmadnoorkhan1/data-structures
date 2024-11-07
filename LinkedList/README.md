@@ -7,6 +7,8 @@ A linked list is a sequenctial list of nodes that holds data which points to oth
 **Where are Linked Lists used?**
 Linked lists are used to implement lists, queues, stacks. They are great to use in circular lists. They can easily model the real world objects. They are used in seperate chaining, which is present in certain hashtable implementations to deal with hashing collisions. Often used in the implementation of adjaceny lists for graphs.
 
+
+
 ### Terminologies in Linked Lists
 
 **Head**: The first node in the linked list.<br>
@@ -54,3 +56,20 @@ Insertion and deletion operations can be more efficient than singly linked lists
 |-----------------------|--------------------------|----------------------------|
 | **Singly Linked Lists**| Uses less memory. Simpler implementation | Cannot easily access previous values. |
 | **Doubly Linked Lists**| Can be traversed in both directions | Uses more memory.          |
+
+## Complexity
+
+| Operation                  | Singly Linked List Complexity                 | Doubly Linked List Complexity                |
+|----------------------------|----------------------------------------------|----------------------------------------------|
+| **Access (get by index)**  | \( O(n) \)                                   | \( O(n) \)                                   |
+| **Insert at Beginning**    | \( O(1) \)                                   | \( O(1) \)                                   |
+| **Insert at End**          | \( O(n) \) if no tail, \( O(1) \) with tail  | \( O(1) \)                                   |
+| **Insert at Specific Index** | \( O(n) \)                                 | \( O(n) \)                                   |
+| **Delete from Beginning**  | \( O(1) \)                                   | \( O(1) \)                                   |
+| **Delete from End**        | \( O(n) \) without tail, \( O(1) \) with tail| \( O(1) \)                                   |
+| **Delete at Specific Index** | \( O(n) \)                                 | \( O(n) \)                                   |
+| **Search by Value**        | \( O(n) \)                                   | \( O(n) \)                                   |
+
+
+## Conclusion
+Grasping the Big O complexities of linked list operations is crucial for choosing the right data structure and methods for efficient manipulation, especially when handling extensive lists. Linked lists, with their dynamic memory allocation, offer flexible insertion and deletion operations, making them ideal for scenarios where frequent modifications are needed. Understanding the performance implications of singly versus doubly linked lists enables better decision-making to ensure your application's optimal performance.
