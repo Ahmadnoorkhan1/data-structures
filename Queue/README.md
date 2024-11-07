@@ -12,11 +12,12 @@ Queues are used in waiting line like mdoels. They are used in web server request
 ## Complexity
 | Functions        | Complexity                     |
 |-----------------------|--------------------------|
-| **Pushing**| O(1) |
-| **Popping**| O(1) |
+| **Enqueue**| O(1) |
+| **Dequeue**| O(1) |
 | **Peeking**| O(1) |
-| **Searching**| O(n) |
-| **Size**| O(1) |
+| **Contains**| O(n) |
+| **Removal**| O(n) |
+| **Is Empty**| O(1) |
 
 
 ## Conclusion
